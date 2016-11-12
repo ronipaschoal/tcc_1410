@@ -1,0 +1,17 @@
+<!-- HOME -->
+<div class="page" id="home">
+	<p><a href="javascript: _app.changePage('update', 'Atualizar');">Atualizar</a> | <a href="javascript: _app.logout();">Logout</a></p>
+	<!-- <p>ID: <span id="idHome"></span></p> -->
+	<p>Nome: <span id="nameHome"></span></p>
+	<p>E-mail: <span id="emailHome"></span></p>
+	<p>Senha: <span id="passwordHome"></span></p>
+	<p>Telefone: <span id="phoneHome"></span></p>
+</div>
+<script>
+
+	// $('#idHome').html(_app.user.id);
+	$('#nameHome').html(_app.user.name);
+	$('#emailHome').html(_app.user.email);
+	$('#passwordHome').html(_app.user.password);
+	$('#phoneHome').html(_app.user.phone);
+</script>

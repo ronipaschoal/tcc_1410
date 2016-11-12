@@ -1,0 +1,42 @@
+<!-- REGISTER -->
+<div class="page" id="register">
+	<h2>Dados Pessoais</h2>
+		<a href="javascript: _app.changePage('initial', 'Phonegap');" id="createBack">Voltar</a>
+		<a href="javascript: _app.changePage('home', 'Home');" id="updateBack" style="display: none;">Voltar</a>
+	<!-- <ul id="itemData" style="cursor:pointer;">
+	</ul> -->
+	<div id="status"></div>
+	<form name="itemForm">
+		<input type="hidden" name="id" id="id">
+		<input type="text" name="name" id="name" placeholder="Nome">
+		<br>
+		<br>
+		<input type="text" name="email" id="email" placeholder="E-mail">
+		<br>
+		<br>
+		<input type="password" name="password" id="password" placeholder="Senha">
+		<br>
+		<br>
+		<input type="text" name="phone" id="phone" placeholder="Telefone">
+		<br>
+		<br>
+		<input type="button" name="create" id="createButton" value="Cadastrar" onclick="_service.sigup()">
+		<input type="button" name="update" id="updateButton" value="Atualizar" onclick="_service.update()" style="display: none;">
+		<!-- <input type="button" name="delete" value="Delete" onclick="_dao.onDelete()"> -->
+	</form>
+</div>
+<script>
+
+	$('#id').val(_app.user.id);
+	$('#name').val(_app.user.name);
+	$('#email').val(_app.user.email);
+	$('#password').val(_app.user.password);
+	$('#phone').val(_app.user.phone);
+
+	if (_app.actualPage == "update") {
+		$("#updateButton").toggle();
+		$("#createButton").toggle();
+		$("#createBack").toggle();
+		$("#updateBack").toggle();
+	}
+</script>
